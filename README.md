@@ -41,13 +41,13 @@ virtualenv venv
 #install python dependencies
 pip install -r requirements.txt
 
-#install pytorch mnually for cuda support
+#install pytorch manually for cuda support
 pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
 ```
 
 ### Other dependencies
-The ```make_video()``` function allows you to make a video visualization of the output of a model.
-Using this function requires you to install:
+The ```make_video()``` function allows you to make a video of the output of a model for a MIDI file.
+Using this function requires to install:
 * [fluidsynth](https://github.com/FluidSynth/fluidsynth/releases)
 * [ffmpeg](https://www.ffmpeg.org/download.html)
 
@@ -55,7 +55,7 @@ Note that the path of the ffmpeg folder will have to be given as argument to the
 and can be installed anywhere.
 
 ## Usage
-The ```train_lstm.ipynb``` and ```train_transformer.ipynb``` notebooks contain all the code you need to
+The ```./train_lstm.ipynb``` and ```./train_transformer.ipynb``` notebooks contain the code to
 preprocess a MIDI dataset, train a recurrent or transformer model, visualize the model's output,
 and export a set of features from your MIDI stimuli. You can open these files with the command ```jupyter notebook train_lstm.ipynb```.
 
