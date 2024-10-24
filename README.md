@@ -48,7 +48,7 @@ pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https
 ### Other dependencies
 The ```make_video()``` function allows you to make a video visualization of the output of a model.
 Using this function requires you to install:
-* [fluidsynth](https://www.ffmpeg.org/download.html)
+* [fluidsynth](https://github.com/FluidSynth/fluidsynth/releases)
 * [ffmpeg](https://www.ffmpeg.org/download.html)
 
 Note that the path of the ffmpeg folder will have to be given as argument to the function ```make_video()```. Fluidsynth will be automatically located,
