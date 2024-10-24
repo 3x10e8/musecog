@@ -57,13 +57,15 @@ and can be installed anywhere.
 ## Usage
 The ```train_lstm.ipynb``` and ```train_transformer.ipynb``` notebooks contain all the code you need to
 preprocess a MIDI dataset, train a recurrent or transformer model, visualize the model's output,
-and export a set of features from your MIDI stimuli.
+and export a set of features from your MIDI stimuli. You can open these files with the command ```jupyter notebook train_lstm.ipynb```.
 
 An small midi dataset is provided in ```./data/midi_dataset_example/```. As neural networks require a large amount of data for
 training, we recommand using pre-built MIDI datasets like [MAESTRO V3.0.0](https://magenta.tensorflow.org/datasets/maestro).
 
 Pre-trained models PolyRNN and PolyTNN are provided in ```./versions/```, and can be accessed directly with the ```make_video()```
 and ```export_features()``` functions.
+
+
 
 
 
