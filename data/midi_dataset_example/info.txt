@@ -1,0 +1,3 @@
+These midi samples are taken from the MAESTRO 3.0 dataset.
+
+The full dataset is available here: https://magenta.tensorflow.org/datasets/maestro
