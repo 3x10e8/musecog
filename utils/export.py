@@ -35,7 +35,7 @@ def export_features(data_path, output_path, model_name = 'transformer_maestro_te
         - surprise_negative_max: maximum negative part of the binary cross entropy across all absent notes
         - surprise_negative_scaled: negative part of the binary cross entropy scaled by the number of absent notes in the target
         - uncertainty: entropy of the model's predictions (normalized probability distribution)
-        - probability_sum: sum of the model's predictions 
+        - predicted_density: predicted note density (sum of probabilities) 
 
     files:
         - features.csv: contains a summary of the features of all midi files in a single table. Each feature is summed over time, either
@@ -172,7 +172,7 @@ def export_features(data_path, output_path, model_name = 'transformer_maestro_te
 
         out_normalized = out / np.sum(out, axis = 0)
         features[file_name]['uncertainty'] = np.sum(-np.log2(out_normalized)*out_normalized,axis = 0) #uncertainty
-        features[file_name]['probability_sum'] = np.sum(out, axis = 0)                                 #sum of probabilities
+        features[file_name]['predicted_density'] = np.sum(out, axis = 0)                                 #sum of probabilities
     
     #create & save features summary
     summary = {}
@@ -228,7 +228,7 @@ def export_features(data_path, output_path, model_name = 'transformer_maestro_te
         #linear interpolation for continuous features
         continuous_features = ['surprise','surprise_max','surprise_scaled',
                                 'surprise_negative','surprise_negative_max','surprise_negative_scaled',
-                                'uncertainty','probability_sum']
+                                'uncertainty','predicted_density']
         for feature in continuous_features:
             if timing_correction:
                 features[file_name][feature] = np.interp(new_time_axis, corrected_time_axis, features[file_name][feature])

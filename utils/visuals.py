@@ -54,7 +54,7 @@ def make_video(file_path = './data/midi_dataset_example/test/',
     parameter: file_path, the path to the midi file
     parameter: file_name, the name of the midi file
     parameter: res, the resolution of the video (width, height)
-    parameter: graph, if True, display the surprise, uncertainty and strength graphs
+    parameter: graph, if True, display the surprise, uncertainty and predicted density graphs
     parameter: model_name, the name of the model folder in ./versions/
     parameter: ffmpeg_path, the path to ffmpeg 
     '''
@@ -63,7 +63,7 @@ def make_video(file_path = './data/midi_dataset_example/test/',
     if graph:
         surprise_graph_lims = [0,25]
         uncertainty_graph_lims = [0, -88*((1/88)*np.log2(1/88)) ] #entropy of a uniform distribution
-        strength_graph_lims = [0,4.5]
+        pdensity_graph_lims = [0,4.5]
 
     #set brightness of model's output
     brightness = 0.5        #model outputs (in range [0;1]) are raised to the power of (1 - brightness) to increase visual contrast
@@ -164,8 +164,8 @@ def make_video(file_path = './data/midi_dataset_example/test/',
         normalized_p = (p.T/np.sum(p, axis = 1)).T
         uncertainty = np.sum((-np.log2(normalized_p) * (normalized_p)), axis = 1)
 
-        #prediction strength
-        strength = np.sum(p, axis = 1)
+        #predicted density
+        pdensity = np.sum(p, axis = 1)
 
     #reformat model input & output for display
     output = torch.cat((output, torch.full((1,88), torch.nan, device = device)),dim = 0)
@@ -194,8 +194,8 @@ def make_video(file_path = './data/midi_dataset_example/test/',
         axs[1].set_xlim([0,len(x_graph)])
         axs[1].get_xaxis().set_visible(False)
 
-        axs[2].title.set_text('Prediction strength')
-        axs[2].set_ylim(strength_graph_lims)
+        axs[2].title.set_text('Predicted Density')
+        axs[2].set_ylim(pdensity_graph_lims)
         axs[2].set_xlim([0,len(x_graph)])
         axs[2].get_xaxis().set_visible(False)
         fig.tight_layout()
@@ -212,13 +212,13 @@ def make_video(file_path = './data/midi_dataset_example/test/',
                 empty_array = np.full([res_input[0]-i_step], np.nan)
                 surprise_ = np.concatenate((empty_array,surprise[:i_step]))
                 uncertainty_ = np.concatenate((empty_array,uncertainty[:i_step]))
-                strength_ = np.concatenate((empty_array,strength[:i_step]))
+                pdensity_ = np.concatenate((empty_array,pdensity[:i_step]))
         else:
             input = sample[i_step-res_input[0]:i_step,:]
             if graph:
                 surprise_ = surprise[i_step-res_input[0]:i_step]
                 uncertainty_ = uncertainty[i_step-res_input[0]:i_step]
-                strength_ = strength[i_step-res_input[0]:i_step]
+                pdensity_ = pdensity[i_step-res_input[0]:i_step]
         out = output[i_step,:]
         output_display = copy.copy(out.reshape(1,88))
         output_display = np.power(output_display, 1 - brightness)
@@ -234,7 +234,7 @@ def make_video(file_path = './data/midi_dataset_example/test/',
         if graph:
             _s = axs[0].plot(x_graph,surprise_,color='black')
             _p = axs[1].plot(x_graph,uncertainty_,color='black')
-            _t = axs[2].plot(x_graph,strength_,color='black')
+            _t = axs[2].plot(x_graph,pdensity_,color='black')
         #convert to cv2 image
         if graph:
             fig.canvas.draw()
