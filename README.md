@@ -10,7 +10,7 @@ This repository contains:
 * PolyTNN: equivalent to PolyRNN, with a transfomer architecture.
 
 More information about this framework can be found in Robert et al. (2024),
-please use this as citation in any publications using this software.
+please use this as citation in publications using this software.
 
 Robert et al., (2024). [Multi-stream predictions in human auditory cortex during natural music listening](). *bioRxiv, 2024-*
 
