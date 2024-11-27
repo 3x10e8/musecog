@@ -1,6 +1,6 @@
-# Indigo
+# MuseCog
 
-**Indigo** is a research project exploring the cognitive mechanisms underlying
+**MuseCog** is a research project exploring the cognitive mechanisms underlying
 music perception. It focuses on modeling the listener's expectations of upcoming notes and rhythms,
 and provides a tool for investigating perceptive and affective 
 processes in behavioral and neuroimaging experiments.
