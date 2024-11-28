@@ -25,16 +25,16 @@ def export_features(data_path, output_path, model_name = 'transformer_maestro_te
         values (linear interpolation). This is useful when precise timing information is required.
 
     features list:
-        - surprise: binary cross entropy between the model's predictions and the target values
-        - surprise_max: maximum binary cross entropy across all simulatenous notes
-        - surprise_scaled: binary cross entropy scaled by the number of simultaneous notes in the target
-        - surprise_positive: positive part of the binary cross entropy
-        - surprise_positive_max: maximum positive part of the binary cross entropy across all simulatenous notes
-        - surprise_positive_scaled: positive part of the binary cross entropy scaled by the number of simultaneous notes in the target
-        - surprise_negative: negative part of the binary cross entropy
-        - surprise_negative_max: maximum negative part of the binary cross entropy across all absent notes
-        - surprise_negative_scaled: negative part of the binary cross entropy scaled by the number of absent notes in the target
-        - uncertainty: entropy of the model's predictions (normalized probability distribution)
+        - surprise: Binary Cross Entropy (BCE) between the model's predictions and the target values
+        - surprise_max: maximum BCE across all simulatenous notes
+        - surprise_scaled: BCE scaled by the number of simultaneous notes in the target
+        - surprise_positive: positive part of the BCE
+        - surprise_positive_max: maximum positive part of the BCE across all simulatenous notes
+        - surprise_positive_scaled: positive part of the BCE scaled by the number of simultaneous notes in the target
+        - surprise_negative: negative part of the BCE
+        - surprise_negative_max: maximum negative part of the BCE across all absent notes
+        - surprise_negative_scaled: negative part of the BCE scaled by the number of absent notes in the target
+        - uncertainty: entropy of the model's predictions. The probabilities are normalized (sum = 1) before computing the entropy.
         - predicted_density: predicted note density (sum of probabilities) 
 
     files:
