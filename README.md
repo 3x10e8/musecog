@@ -5,6 +5,9 @@ music perception. It focuses on modeling the listener's expectations of upcoming
 and provides a tool for investigating perceptive and affective 
 processes in behavioral and neuroimaging experiments.
 
+[![hippo](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExajlhYzg3dHpyaGQybGFrNW0xaGg4MXVzYWMxamdzYWpqcDJnc28zciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ESG8KQI9EcrwtPiukE/giphy.gif)](https://www.youtube.com/watch?v=WTHKQMljzXY)
+
+
 This repository contains:
 * PolyRNN: an LSTM model built to yield time-resolved predictions in polyphonic music.
 * PolyTNN: equivalent to PolyRNN, with a transfomer architecture.
@@ -30,8 +33,8 @@ With Windows Command Prompt:
 
 ```bash
 #clone repository
-git clone https://github.com/pl-robert/indigo
-cd indigo
+git clone https://github.com/pl-robert/musecog
+cd musecog
 
 #set up a virtual environment
 pip install virtualenv
