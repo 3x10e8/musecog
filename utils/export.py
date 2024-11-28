@@ -35,7 +35,7 @@ def export_features(data_path, output_path, model_name = 'transformer_maestro_te
         - surprise_negative_max: maximum negative part of the BCE across all absent notes
         - surprise_negative_scaled: negative part of the BCE scaled by the number of absent notes in the target
         - uncertainty: entropy of the model's predictions. The probabilities are normalized (sum = 1) before computing the entropy.
-        - predicted_density: predicted note density (sum of probabilities) 
+        - predicted_density: predicted note density (sum of probabilities)
 
     files:
         - features.csv: contains a summary of the features of all midi files in a single table. Each feature is summed over time, either
