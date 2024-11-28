@@ -5,7 +5,7 @@ music perception. It focuses on modeling the listener's expectations of upcoming
 and provides a tool for investigating perceptive and affective 
 processes in behavioral and neuroimaging experiments.
 
-[![hippo](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExajlhYzg3dHpyaGQybGFrNW0xaGg4MXVzYWMxamdzYWpqcDJnc28zciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ESG8KQI9EcrwtPiukE/giphy.gif)](https://www.youtube.com/watch?v=WTHKQMljzXY)
+[![hippo](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDdqZm5mcThqZDc0MzZ4aHVxc2Qzb3NkNGdnejB1OHM1YjNocGRydiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lZOf8i68nhLbE5WfMk/giphy.gif)](https://www.youtube.com/watch?v=WTHKQMljzXY)
 
 
 This repository contains:
@@ -31,20 +31,25 @@ and install [CUDA](https://developer.nvidia.com/cuda-downloads).
 ### Python environment
 With Windows Command Prompt:
 
+* clone repository
+
 ```bash
-#clone repository
 git clone https://github.com/pl-robert/musecog
 cd musecog
+```
 
-#set up a virtual environment
+* set up a virtual environment
+
+```bash
 pip install virtualenv
 virtualenv venv
 .\venv\Scripts\activate.bat
+```
 
-#install python dependencies
+* install python dependencies
+
+```bash
 pip install -r requirements.txt
-
-#install pytorch manually for cuda support
 pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
 ```
 
