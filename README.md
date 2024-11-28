@@ -5,14 +5,23 @@ music perception. It focuses on modeling the listener's expectations of upcoming
 and provides a tool for investigating perceptive and affective 
 processes in behavioral and neuroimaging experiments.
 
+<div align="center">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamx0dnI3enBsMXJ1eHFubzhsajlpcTkxd2wxcDJ2eGV0Yjc5dGZ6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lZOf8i68nhLbE5WfMk/giphy.webp" alt="PolyRNN Demo">
+  <br>
+  <em>PolyRNN predictions in Bach's prelude in C# Major</em>
+  <br>
+  <em>- <a href="https://www.youtube.com/watch?v=WTHKQMljzXY">demo with sound</a> -</em>
+  <br><br>
+</div>
+
 This repository contains:
 * PolyRNN: an LSTM model built to yield time-resolved predictions in polyphonic music.
-* PolyTNN: equivalent to PolyRNN, with a transfomer architecture.
+* PolyTNN: equivalent to PolyRNN, with a transformer architecture.
 
 More information about this framework can be found in Robert et al. (2024),
 please use this as citation in publications using this software.
 
-Robert et al., (2024). [Multi-stream predictions in human auditory cortex during natural music listening](). *bioRxiv, 2024-*
+Robert et al., (2024). [Multi-stream predictions in human auditory cortex during natural music listening](). *bioRxiv, 2024-11*
 
 ## Setup
 
@@ -28,20 +37,25 @@ and install [CUDA](https://developer.nvidia.com/cuda-downloads).
 ### Python environment
 With Windows Command Prompt:
 
-```bash
-#clone repository
-git clone https://github.com/pl-robert/indigo
-cd indigo
+* clone repository
 
-#set up a virtual environment
+```bash
+git clone https://github.com/pl-robert/musecog
+cd musecog
+```
+
+* set up a virtual environment
+
+```bash
 pip install virtualenv
 virtualenv venv
 .\venv\Scripts\activate.bat
+```
 
-#install python dependencies
+* install python dependencies
+
+```bash
 pip install -r requirements.txt
-
-#install pytorch manually for cuda support
 pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
 ```
 
