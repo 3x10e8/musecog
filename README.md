@@ -5,7 +5,7 @@ music perception. It focuses on modeling the listener's expectations of upcoming
 and provides a tool for investigating perceptive and affective 
 processes in behavioral and neuroimaging experiments.
 
-[![hippo](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDdqZm5mcThqZDc0MzZ4aHVxc2Qzb3NkNGdnejB1OHM1YjNocGRydiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lZOf8i68nhLbE5WfMk/giphy.gif)](https://www.youtube.com/watch?v=WTHKQMljzXY)
+[![hippo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamx0dnI3enBsMXJ1eHFubzhsajlpcTkxd2wxcDJ2eGV0Yjc5dGZ6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lZOf8i68nhLbE5WfMk/giphy.webp)](https://www.youtube.com/watch?v=WTHKQMljzXY)
 
 
 This repository contains:
