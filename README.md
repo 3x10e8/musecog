@@ -1,8 +1,7 @@
 # MuseCog
 
 **MuseCog** is a repository hosting neural network models of cognitive processes involved in music perception.
-In this initial release, it contains models of listener's expectations of upcoming notes and rhythms.
-They are designed for the study of perceptive and affective processes in behavioral and neuroimaging experiments.
+In this initial release, it contains models of listener's expectations of upcoming notes and rhythms, designed for the study of perceptive and affective processes in behavioral and neuroimaging experiments.
 
 <div align="center">
   <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamx0dnI3enBsMXJ1eHFubzhsajlpcTkxd2wxcDJ2eGV0Yjc5dGZ6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lZOf8i68nhLbE5WfMk/giphy.webp" alt="PolyRNN Demo">
