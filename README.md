@@ -14,7 +14,7 @@ Currently, it contains models of listener's expectations of upcoming notes and r
 
 This repository contains:
 * PolyRNN: an LSTM model built to yield time-resolved predictions in polyphonic music.
-* (comming soon) PolyTNN : equivalent to PolyRNN, with a transformer architecture.
+* (coming soon) PolyTNN : equivalent to PolyRNN, with a transformer architecture.
 
 More information about this framework can be found in Robert et al. (2024),
 please use this as citation in publications using this software.
