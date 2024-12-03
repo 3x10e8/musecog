@@ -1,7 +1,6 @@
 # MuseCog
 
-**MuseCog** is a repository hosting neural network models of cognitive processes involved in music perception, to be used for the study of perceptive and affective processes in behavioral and neuroimaging experiments.
-Currently, it contains models of listener's expectations of upcoming notes and rhythms.
+**MuseCog** is a repository of neural network models designed to simulate cognitive processes underlying music perception. These models are intended to support research on perceptual and affective mechanisms in behavioral and neuroimaging studies. Current implementations focus on modeling listener expectations for upcoming notes and rhythms in polyphonic music.
 
 <div align="center">
   <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamx0dnI3enBsMXJ1eHFubzhsajlpcTkxd2wxcDJ2eGV0Yjc5dGZ6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lZOf8i68nhLbE5WfMk/giphy.webp" alt="PolyRNN Demo">
@@ -14,7 +13,7 @@ Currently, it contains models of listener's expectations of upcoming notes and r
 
 This repository contains:
 * PolyRNN: an LSTM model built to yield time-resolved predictions in polyphonic music.
-* (comming soon) PolyTNN : equivalent to PolyRNN, with a transformer architecture.
+* (coming soon) PolyTNN : equivalent to PolyRNN, with a transformer architecture.
 
 More information about this framework can be found in Robert et al. (2024),
 please use this as citation in publications using this software.
