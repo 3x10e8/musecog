@@ -18,7 +18,7 @@ This repository contains:
 More information about this framework can be found in Robert et al. (2024),
 please use this as citation in publications using this software.
 
-Robert et al., (2024). [Multi-stream predictions in human auditory cortex during natural music listening](https://www.biorxiv.org/content/10.1101/2024.11.27.625704v1). *bioRxiv, 2024-11*
+Robert et al., (2024). [PolyRNN: A time-resolved model of polyphonic musical expectations aligned with human brain responses](https://www.biorxiv.org/content/10.1101/2024.11.27.625704v2). *bioRxiv, 2024-11*
 
 ## Setup
 
